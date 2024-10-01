@@ -1,6 +1,7 @@
 package com.example.mvvmmvihomework.spacexschedule.presentation.screens
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
@@ -32,8 +33,16 @@ class ScheduleFragment : Fragment(R.layout.fragment_schedule) {
     private fun getInfo() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.scheduleflow.collectLatest {
-                    adapter.submitList(it)
+                viewModel.scheduleflow.collectLatest { scheduleList ->
+                    adapter.submitList(scheduleList)
+//                    Log.d("My logs",scheduleList.toString())
+                }
+            }
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.getTime.collectLatest {
+                    binding.currentTime.text = it
                 }
             }
         }

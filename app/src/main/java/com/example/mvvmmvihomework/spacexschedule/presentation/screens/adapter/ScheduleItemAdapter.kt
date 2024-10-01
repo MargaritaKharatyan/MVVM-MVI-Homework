@@ -9,7 +9,7 @@ import com.example.mvvmmvihomework.databinding.TemplateBinding
 import com.example.mvvmmvihomework.spacexschedule.domain.model.ScheduleDomainModel
 
 class ScheduleItemAdapter : RecyclerView.Adapter<ScheduleItemAdapter.ScheduleItemHolder>() {
-   private var itemList = listOf<ScheduleDomainModel>()
+    private var itemList = listOf<ScheduleDomainModel>()
 
     class ScheduleItemHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = TemplateBinding.bind(item)
@@ -23,11 +23,11 @@ class ScheduleItemAdapter : RecyclerView.Adapter<ScheduleItemAdapter.ScheduleIte
     override fun onBindViewHolder(holder: ScheduleItemHolder, position: Int) {
         val item = itemList[position]
         holder.binding.apply {
-            missionName.text = item.missionName
+            missionName.text = "Mission name: " + item.missionName
 //            date.text = SimpleDateFormat("yyyy-MM-dd").format(Date())
-            date.text = item.date
-            details.text=item.details
-            status.text = item.scheduleStatus
+            date.text = "Date: " + item.date
+            details.text = "Detailes: " + item.details
+            status.text = "Status: " + item.scheduleStatus
 //            btnDelete.setOnClickListener {
 //                removeItem(item, position)
 //            }

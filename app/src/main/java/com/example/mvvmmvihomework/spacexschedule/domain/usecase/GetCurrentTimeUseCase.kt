@@ -4,11 +4,12 @@ import com.example.mvvmmvihomework.spacexschedule.domain.model.ScheduleDomainMod
 import com.example.mvvmmvihomework.spacexschedule.domain.repository.SpaceXScheduleRepository
 import kotlinx.coroutines.flow.Flow
 
-interface GetScheduleUseCase {
-    suspend fun invoke(): Flow<List<ScheduleDomainModel>>
+
+interface GetCurrentTimeUseCase {
+    suspend fun invoke(): Flow<String>
 }
 
-class GetScheduleUseCaseImpl(private val repository: SpaceXScheduleRepository) :
-    GetScheduleUseCase {
-    override suspend fun invoke() = repository.getSchedulesList()
+class GetCurrentTimeUseCaseImpl(private val repository: SpaceXScheduleRepository) :
+    GetCurrentTimeUseCase {
+    override suspend fun invoke() = repository.getCurrentTime()
 }

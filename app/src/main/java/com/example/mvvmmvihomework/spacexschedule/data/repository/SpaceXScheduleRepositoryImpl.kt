@@ -6,6 +6,7 @@ import com.example.mvvmmvihomework.spacexschedule.domain.model.ScheduleDomainMod
 import com.example.mvvmmvihomework.spacexschedule.domain.repository.SpaceXScheduleRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 
@@ -14,6 +15,12 @@ class SpaceXScheduleRepositoryImpl(private val scheduleHelper: SpaceXScheduleHel
     override suspend fun getSchedulesList(): Flow<List<ScheduleDomainModel>> {
         return withContext(context = Dispatchers.IO) {
             scheduleHelper.getScheduleList().map { flow -> flow.map { it.toDomainModel() } }
+        }
+    }
+
+    override suspend fun getCurrentTime(): Flow<String> {
+        return withContext(context = Dispatchers.IO) {
+            flow { emit(scheduleHelper.getCurrentTime().toString()) }
         }
     }
 }

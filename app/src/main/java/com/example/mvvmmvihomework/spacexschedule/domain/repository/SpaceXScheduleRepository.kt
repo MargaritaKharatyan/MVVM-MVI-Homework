@@ -5,5 +5,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface SpaceXScheduleRepository {
     suspend fun getSchedulesList(): Flow<List<ScheduleDomainModel>>
+    suspend fun getCurrentTime(): Flow<String>
 //    suspend fun getSchedule(schedule: ScheduleDomainModel)
 }

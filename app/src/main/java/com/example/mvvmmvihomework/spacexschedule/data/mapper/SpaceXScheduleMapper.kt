@@ -1,6 +1,6 @@
 package com.example.mvvmmvihomework.spacexschedule.data.mapper
 
-import com.example.mvvmmvihomework.spacexschedule.data.ScheduleDataModel
+import com.example.mvvmmvihomework.spacexschedule.data.model.ScheduleDataModel
 import com.example.mvvmmvihomework.spacexschedule.domain.model.ScheduleDomainModel
 
 

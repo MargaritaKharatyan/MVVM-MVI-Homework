@@ -1,4 +1,4 @@
-package com.example.mvvmmvihomework.spacexschedule.data
+package com.example.mvvmmvihomework.spacexschedule.data.model
 
 data class ScheduleDataModel(
     val missionName: String,

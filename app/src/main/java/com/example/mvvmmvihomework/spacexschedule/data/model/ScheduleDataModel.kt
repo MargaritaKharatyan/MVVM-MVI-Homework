@@ -6,8 +6,3 @@ data class ScheduleDataModel(
     val details: String,
     var scheduleStatus: String,
 )
-
-//sealed class ScheduleStatus (val message: String) {
-//    data object Failed : ScheduleStatus("Launch was successful")
-//    data object Successful : ScheduleStatus("Launch failed")
-//}

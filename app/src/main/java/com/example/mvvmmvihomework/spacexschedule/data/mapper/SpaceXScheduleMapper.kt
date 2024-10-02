@@ -3,7 +3,6 @@ package com.example.mvvmmvihomework.spacexschedule.data.mapper
 import com.example.mvvmmvihomework.spacexschedule.data.model.ScheduleDataModel
 import com.example.mvvmmvihomework.spacexschedule.domain.model.ScheduleDomainModel
 
-
 fun ScheduleDomainModel.toDataModel() = ScheduleDataModel(
     missionName = this.missionName,
     date = this.date,

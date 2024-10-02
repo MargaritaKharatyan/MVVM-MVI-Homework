@@ -1,16 +1,14 @@
 package com.example.mvvmmvihomework.spacexschedule.data.helper
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import com.example.mvvmmvihomework.spacexschedule.data.model.ScheduleDataModel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import java.util.Date
 
+@RequiresApi(Build.VERSION_CODES.O)
 class SpaceXScheduleHelper {
     private val _scheduleList: MutableStateFlow<List<ScheduleDataModel>> =
         MutableStateFlow(emptyList())
-
-    private val currentTime: MutableStateFlow<String> =
-        MutableStateFlow(Date(System.currentTimeMillis()).toString())
 
     init {
         _scheduleList.value = arrayListOf<ScheduleDataModel>(
@@ -68,24 +66,11 @@ class SpaceXScheduleHelper {
                 "Engine failure at 33 seconds and loss of vehicle",
                 "Launch was successful"
             ),
+        )
 
-
-            )
     }
 
     fun getScheduleList(): MutableStateFlow<List<ScheduleDataModel>> {
         return _scheduleList
     }
-
-    fun getCurrentTime(): MutableStateFlow<String> {
-        return currentTime
-    }
-
-//    fun gwtSchedule(schedule: ScheduleDataModel) {
-//        _scheduleList.value = _scheduleList.value.plus(schedule)
-//    }
-//
-//    fun clearStudentList() {
-//        _studentList.value = emptyList()
-//    }
 }

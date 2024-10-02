@@ -24,13 +24,9 @@ class ScheduleItemAdapter : RecyclerView.Adapter<ScheduleItemAdapter.ScheduleIte
         val item = itemList[position]
         holder.binding.apply {
             missionName.text = "Mission name: " + item.missionName
-//            date.text = SimpleDateFormat("yyyy-MM-dd").format(Date())
             date.text = "Date: " + item.date
             details.text = "Detailes: " + item.details
             status.text = "Status: " + item.scheduleStatus
-//            btnDelete.setOnClickListener {
-//                removeItem(item, position)
-//            }
         }
 
     }

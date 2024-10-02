@@ -1,8 +1,8 @@
-package com.example.mvvmmvihomework.spacexschedule.presentation.di
+package com.example.mvvmmvihomework.spacexschedules.presentation.di
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.example.mvvmmvihomework.spacexschedule.presentation.view_model.ScheduleViewModel
+import com.example.mvvmmvihomework.spacexschedules.presentation.view_model.ScheduleViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 

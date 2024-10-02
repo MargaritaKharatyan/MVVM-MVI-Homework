@@ -1,4 +1,4 @@
-package com.example.mvvmmvihomework.spacexschedule.presentation.screens
+package com.example.mvvmmvihomework.spacexschedules.presentation.screens
 
 import android.os.Build
 import android.os.Bundle
@@ -11,15 +11,15 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmmvihomework.R
 import com.example.mvvmmvihomework.databinding.FragmentScheduleBinding
-import com.example.mvvmmvihomework.spacexschedule.presentation.screens.adapter.ScheduleItemAdapter
-import com.example.mvvmmvihomework.spacexschedule.presentation.view_model.ScheduleViewModel
+import com.example.mvvmmvihomework.spacexschedules.presentation.screens.adapter.ScheduleAdapter
+import com.example.mvvmmvihomework.spacexschedules.presentation.view_model.ScheduleViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ScheduleFragment : Fragment(R.layout.fragment_schedule) {
     private lateinit var binding: FragmentScheduleBinding
-    private val adapter = ScheduleItemAdapter()
+    private val adapter = ScheduleAdapter()
     private val viewModel: ScheduleViewModel by viewModel()
 
     @RequiresApi(Build.VERSION_CODES.O)

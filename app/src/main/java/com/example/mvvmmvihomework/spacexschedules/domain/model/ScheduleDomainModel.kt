@@ -1,8 +1,8 @@
-package com.example.mvvmmvihomework.spacexschedule.domain.model
+package com.example.mvvmmvihomework.spacexschedules.domain.model
 
 data class ScheduleDomainModel(
     val missionName: String,
     val date: String,
     val details: String,
-    var scheduleStatus: String,
+    var Status: String,
 )

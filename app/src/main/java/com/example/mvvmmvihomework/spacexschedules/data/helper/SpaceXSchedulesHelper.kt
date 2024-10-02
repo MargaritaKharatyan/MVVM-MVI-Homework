@@ -1,12 +1,12 @@
-package com.example.mvvmmvihomework.spacexschedule.data.helper
+package com.example.mvvmmvihomework.spacexschedules.data.helper
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.example.mvvmmvihomework.spacexschedule.data.model.ScheduleDataModel
+import com.example.mvvmmvihomework.spacexschedules.data.model.ScheduleDataModel
 import kotlinx.coroutines.flow.MutableStateFlow
 
 @RequiresApi(Build.VERSION_CODES.O)
-class SpaceXScheduleHelper {
+class SpaceXSchedulesHelper {
     private val _scheduleList: MutableStateFlow<List<ScheduleDataModel>> =
         MutableStateFlow(emptyList())
 

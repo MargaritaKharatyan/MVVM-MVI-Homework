@@ -3,7 +3,7 @@ package com.example.mvvmmvihomework
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mvvmmvihomework.databinding.ActivityMainBinding
-import com.example.mvvmmvihomework.spacexschedule.presentation.screens.ScheduleFragment
+import com.example.mvvmmvihomework.spacexschedules.presentation.screens.ScheduleFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding

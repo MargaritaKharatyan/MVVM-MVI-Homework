@@ -1,11 +1,11 @@
-package com.example.mvvmmvihomework.spacexschedule.presentation.view_model
+package com.example.mvvmmvihomework.spacexschedules.presentation.view_model
 
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mvvmmvihomework.spacexschedule.domain.model.ScheduleDomainModel
-import com.example.mvvmmvihomework.spacexschedule.domain.usecase.GetScheduleUseCase
+import com.example.mvvmmvihomework.spacexschedules.domain.model.ScheduleDomainModel
+import com.example.mvvmmvihomework.spacexschedules.domain.usecase.GetScheduleUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
